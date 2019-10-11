@@ -1,5 +1,7 @@
 <?php
 
+use App\User;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,3 +16,12 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('test',function()
+{
+	return User::all();
+});
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
