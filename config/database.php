@@ -42,7 +42,7 @@ return [
             'prefix' => '',
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
-        'mongodb' => [
+       /* 'mongodb' => [
     'driver'   => 'mongodb',
     'host'     => env('DB_HOST', 'localhost'),
     'port'     => env('DB_PORT', 27017),
@@ -52,6 +52,12 @@ return [
     'options'  => [
         'database' => 'admin' // sets the authentication database required by mongo 3
     ]
+],*/
+
+'mongodb' => [
+    'driver'   => 'mongodb',
+    'dsn' => 'mongodb+srv://varunjoghee:vinrun1991@cluster0-kzog8.mongodb.net/test?retryWrites=true&w=majority',
+    'database' => 'MyMediPocket',
 ],
 
         'mysql' => [
